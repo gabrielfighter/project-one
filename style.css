@@ -1,0 +1,16 @@
+.main{
+    background-color: whitesmoke;
+}
+footer{
+    background-color: whitesmoke;
+}
+.container {
+    background-color: white;
+    color: rgb(84, 84, 84);
+    margin-top: 30px;
+    text-align: center;
+    
+}
+.cont{
+    flex: auto;
+}
