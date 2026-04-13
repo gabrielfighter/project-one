@@ -5,10 +5,13 @@ footer{
     background-color: whitesmoke;
 }
 .container {
-    background-color: white;
-    color: rgb(84, 84, 84);
+    display:block;
+    background-color:#F0F2DF;
+    color: rgb(0, 0, 0);
     margin-top: 30px;
     text-align: center;
+    font: 1.2em sans-serif;
+    margin: auto;
     
 }
 .cont{
