@@ -10,42 +10,63 @@
 
 </head>
 <body>
-  <nav class="navbar bg-body-secondary">
-    <div class="container-fluid d-flex justify-between">
-
-    <!-- ESQUERDA -->
-    <h4 class="mb-0">decora fitz</h4>
-
-    <!-- DIREITA -->
-    <div >
-      <button class="btn btn-light">Home</button>
-      <button class="btn btn-light">Produtos</button>
-      <button class="btn btn-light">Quem somos</button>
-      <button class="btn btn-light">Contatos</button>
-    </div>
-  </div>
+  <nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3">
+  <a class="navbar-brand" href="#">
+    <img id="fav" src="favicon/tambor-conjunto-red.jpg" alt="">
+    DECORA FITZ</a>
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link" href="#scrollspyHeading1">Quem Somos?</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#scrollspyHeading2">Second</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#scrollspyHeading3">Third</a></li>
+        <li><a class="dropdown-item" href="#scrollspyHeading4">Fourth</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#scrollspyHeading5">Fifth</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
-    
-<main class="container">
+<div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
+  
+  <main class="container" id="scrollspyHeading1">
   <h2>Quem Somos?</h2>
 
-    <img src="img-red/tambor-jeep-red-cortada.jpg" alt="imagem do produto ">
-
+  <img id="img-quem-somos" src="img-red/Logo elegante com móveis reaproveitados.png" alt="imagem do produto ">
+  
+  <div class="org">
     <p class="bloco1">Engenharia Reversa, Design de Futuro
-      Nascemos da convicção de que o potencial de um material não termina quando sua função 
+      Nascemos da convicção de que o potencial de um material não termina quando sua função
       industrial
-       chega ao fim. Somos uma empresa dedicada à curadoria e transformação de resíduos industriais em 
-       objetos de alto valor agregado, unindo rigor técnico e consciência estética</p>
+        chega ao fim. Somos uma empresa dedicada à curadoria e transformação de resíduos industriais em
+        objetos de alto valor agregado, unindo rigor técnico e consciência estética</p>
     <p class="bloco1">Ciclo de Vida Infinito
-      Onde o setor produtivo enxerga descarte, nossa empresa enxerga matéria-prima nobre. 
-      Especializamo-nos em identificar componentes — metais, polímeros e madeiras técnicas — que 
-      possuem integridade estrutural e estética, mas que seriam destinados a aterros ou processos de 
+      Onde o setor produtivo enxerga descarte, nossa empresa enxerga matéria-prima nobre.
+      Especializamo-nos em identificar componentes — metais, polímeros e madeiras técnicas — que
+      possuem integridade estrutural e estética, mas que seriam destinados a aterros ou processos de
       reciclagem de baixo impacto.
-      Nosso processo de criação é uma homenagem à resistência. Recuperamos materiais desenvolvidos 
-      para suportar grandes cargas e o rigor da indústria, aplicando design de precisão para devolvê-los 
+      Nosso processo de criação é uma homenagem à resistência. Recuperamos materiais desenvolvidos
+      para suportar grandes cargas e o rigor da indústria, aplicando design de precisão para devolvê-los
       ao cotidiano em formas surpreendentes e funcionais.
     </p>
+  </div>
 </main>
+  <h4 id="scrollspyHeading2">Second heading</h4>
+  <p>...</p>
+  <h4 id="scrollspyHeading3">Third heading</h4>
+  <p>...</p>
+  <h4 id="scrollspyHeading4">Fourth heading</h4>
+  
+  <h4 id="scrollspyHeading5">Fifth heading</h4>
+  <p>...</p>
+</div>
+    
+
 
 <div class="cont">
     <p>lelit. Reprehempore sed quas impedit fuga est natus?</p>
