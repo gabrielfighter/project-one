@@ -39,3 +39,18 @@ footer{
 .carousel-item {
     transition: opacity .6s ease-in-out;
 }
+ul{
+    margin-block-start: 15px;
+    list-style-type: none;
+    
+}
+li{
+    border:aliceblue;
+    border-radius: 5px;
+    font-size: 1.5em;
+}
+li:hover{
+   
+    background-color: aliceblue;
+    
+}
