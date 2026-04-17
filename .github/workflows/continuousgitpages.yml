@@ -3,8 +3,7 @@ name: Deploy site no GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+  pull_request:
 
 permissions:
   contents: read
