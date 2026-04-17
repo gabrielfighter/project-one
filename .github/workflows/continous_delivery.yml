@@ -1,0 +1,23 @@
+name: Deploy HTML (CD)
+
+on:
+  workflow_run:
+    workflows: ["Validar HTML- ci"]
+    types:
+      - completed
+
+jobs:
+  hospedagem:
+    runs-on: ubuntu-latest
+
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+
+    steps:
+      - name: Baixar código
+        uses: actions/checkout@v4
+
+      - name: Deploy para GitHub Pages # "Hospedar o site no GitHub Pages"
+        uses: peaceiris/actions-gh-pages@v4 # actions
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
