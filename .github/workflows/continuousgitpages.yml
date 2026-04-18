@@ -1,7 +1,6 @@
 name: Validar HTML- ci 
 
 on:
-  push:
   pull_request:
 
 jobs:
