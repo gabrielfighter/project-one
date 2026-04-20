@@ -2,8 +2,6 @@ name: Validar HTML- ci
 
 on:
   pull_request:
-    branches:
-      - main
 
 jobs:
   html-validation:
