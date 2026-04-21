@@ -1,4 +1,4 @@
-name: Deploy HTML (CD)
+name: delivery HTML (CD)
 
 on:
   workflow_dispatch:
