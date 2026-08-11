@@ -2,7 +2,7 @@ name: continous integration - validando HTML
 
 on:
   push:
-    pull_request:
+  pull_request:
 
 jobs:
   html-validation:
