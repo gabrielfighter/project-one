@@ -61,8 +61,8 @@ a{
     background-color: bisque;
 }
 .column{
-
-    
-
     background-color: aquamarine;
+}
+#colcard{
+    margin-top: 40px;
 }
