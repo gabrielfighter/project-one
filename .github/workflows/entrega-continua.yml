@@ -1,0 +1,26 @@
+name: CI - Validar HTML
+
+on:
+pull_request:
+branches:
+- main
+
+jobs:
+validar-html:
+runs-on: ubuntu-latest
+
+steps:
+  - name: Baixar o código
+    uses: actions/checkout@v4
+
+  - name: Configurar Node.js
+    uses: actions/setup-node@v4
+    with:
+      node-version: 22
+
+  - name: Instalar HTMLHint
+    run: npm install -g htmlhint
+
+  - name: Validar HTML
+    run: htmlhint "**/*.html"
+
