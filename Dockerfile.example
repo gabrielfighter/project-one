@@ -1,0 +1,6 @@
+FROM httpd:2.4 //imagem que voce vai usar nesse container [poderia ser node, ubuntu, python]
+// httpd nome da imagem container ":" dividi versçao 2.4 é a versão 
+
+COPY ./index.html /usr/local/apache2/htdocs/
+
+// COPY [LOCAL NO SEU PC] ´ESPACO´ [LOCAL DENTRO DO CONTAINER]
