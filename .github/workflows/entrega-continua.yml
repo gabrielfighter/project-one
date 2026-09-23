@@ -1,14 +1,13 @@
-name: CI - Validar HTML
+name: CI - Validar HTML e Testes
 
 on:
   pull_request:
     branches:
-    - main
+      - main
 
 jobs:
   validar-html:
     runs-on: ubuntu-latest
-
     steps:
       - name: Baixar o código
         uses: actions/checkout@v4
@@ -24,3 +23,19 @@ jobs:
       - name: Validar HTML
         run: htmlhint "**/*.html"
 
+  testes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar o código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Instalar dependências
+        run: npm ci
+
+      
