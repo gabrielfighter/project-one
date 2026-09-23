@@ -1,0 +1,37 @@
+name: Alerta no Discord
+
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  notificar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enviar alerta para o Discord
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+          AUTOR: ${{ github.actor }}
+          BRANCH: ${{ github.ref_name }}
+          REPO: ${{ github.repository }}
+          MENSAGEM: ${{ github.event.head_commit.message }}
+          URL: ${{ github.event.head_commit.url }}
+        run: |
+          PRIMEIRA_LINHA=$(echo "$MENSAGEM" | head -n 1 | cut -c1-200)
+
+          if [ "$BRANCH" = "main" ]; then
+            TITULO="🚀 Atualização na main (merge ou push)"
+          else
+            TITULO="📝 Novo commit"
+          fi
+
+          TEXTO="**$TITULO**
+          **Repositório:** $REPO
+          **Branch:** $BRANCH
+          **Autor:** $AUTOR
+          **Mensagem:** $PRIMEIRA_LINHA
+          $URL"
+
+          jq -n --arg content "$TEXTO" '{content: $content}' \
+            | curl -sS -H "Content-Type: application/json" -d @- "$DISCORD_WEBHOOK"
