@@ -66,3 +66,7 @@ a{
 #colcard{
     margin-top: 40px;
 }
+.card-img-padrao {
+  height: 220px;      /* ajuste conforme preferir */
+  object-fit: cover;  /* recorta a imagem sem distorcer */
+}
