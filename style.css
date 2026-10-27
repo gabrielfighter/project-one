@@ -15,8 +15,10 @@
 img{
   margin-bottom: 15px;   
 }
-#img-quem-somos{
-    box-shadow: 1px,1px,10 black;
+#img-quem-somos {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
     border-radius: 5px;
 
 }
@@ -65,4 +67,8 @@ a{
 }
 #colcard{
     margin-top: 40px;
+}
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
 }
